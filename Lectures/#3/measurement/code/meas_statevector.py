@@ -27,7 +27,7 @@ simulator = Aer.get_backend('statevector_simulator')
 job = simulator.run(Q_circuit)
 result = job.result()
 outputstate = result.get_statevector(Q_circuit, decimals=3)
-print(outputstate)
+print(f"Output string: {outputstate}")
 
 # Map statevector to dictionary
 sv_dict = statevector_to_dict(outputstate.data)
